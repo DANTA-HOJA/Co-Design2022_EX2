@@ -129,5 +129,3 @@ const unsigned char op_bytes[129]={
 1, //=F8   MOV   Rn,A
 0
 };
-
-

@@ -1,13 +1,13 @@
 #include "systemc.h"
-#include <conio.h>
+// #include <conio.h>
 #include <stdlib.h>
-#define clockcycle      10  //10ns=100MHz
+#define clockcycle 10  //10ns=100MHz
 //#define clockcycle_800  1.25//1.25ns=800MHz
 #include "top.h"
 
 
-DWORD WINAPI ShowWinThreadProc(LPVOID pParam);
-DWORD ShowWinID=0;
+// DWORD WINAPI ShowWinThreadProc(LPVOID pParam);
+// DWORD ShowWinID=0;
 
 
 
@@ -63,7 +63,7 @@ int sc_main(int argc, char *argv[])
 	//Start Test
 	int t,k;
 	int score=0;
-	VARS_8051   olds, news;
+	VARS_8051 olds, news;
 
 	reset.write(1);
 
@@ -72,21 +72,21 @@ int sc_main(int argc, char *argv[])
 	}
 	reset.write(0);
 	top.core->save_vars(&olds);
-	//dolog=true;
-	dolog=false;
+	dolog=true;
+	// dolog=false;
 	for(;t<300;t++) {
 		if (dolog) {
-			printf("%08d#",t);
+			printf("\n\n%08d#",t);
 			top.core->show_assembly();
 		}
 
 		if(t % 1 == 0){
-			int p0 = top.port0o.read();  //A 8051°e¥Xsample­È
-			int p1 = top.port1i.read();  //D FIR¦^¶Ç­pºâµ²ªG
-			int p2 = top.port3i.read();  //C 1:FIR¤w§âµ²ªG­pºâ§¹²¦  0:FIRµ²ªG©|¥¼­pºâ§¹²¦
-			int p3 = top.port3o.read();  //B 1:8051§âsample­È·Ç³Æ¦n 0:8051ªºsample­È©|¥¼·Ç³Æ¦n
+			int p0 = top.port0o.read();  //A 8051é€å‡ºsampleå€¼
+			int p1 = top.port1i.read();  //D FIRå›å‚³è¨ˆç®—çµæœ
+			int p2 = top.port3i.read();  //C 1:FIRå·²æŠŠçµæœè¨ˆç®—å®Œç•¢  0:FIRçµæœå°šæœªè¨ˆç®—å®Œç•¢
+			int p3 = top.port3o.read();  //B 1:8051æŠŠsampleå€¼æº–å‚™å¥½ 0:8051çš„sampleå€¼å°šæœªæº–å‚™å¥½
 
-			printf("Time:%d, P0=%d, P1=%d, P2=%d, P3=%d\n\n", t, p0, p1, p2, p3);
+			printf("Time:%d, P0=%d, P1=%d, P2=%d, P3=%d\n", t, p0, p1, p2, p3);
 		}
 
 		sc_start(clockcycle,SC_NS);
@@ -137,12 +137,11 @@ int sc_main(int argc, char *argv[])
 		}
 */
 		// Press "Esc" to exit this program
-		if (kbhit()) 
-		{
-			k=getch();
-			if ((k==3)||(k==27)) break;
-		}
+		// if (kbhit()) 
+		// {
+		// 	k=getch();
+		// 	if ((k==3)||(k==27)) break;
+		// }
 	}
-	system("pause");
 	return 0;
 }

@@ -16,7 +16,7 @@ bool core_8051::loadrom(const char *filename)
     unsigned int u;
     int i;
     FR=fopen(filename,"r");
-    if (FR==NULL) return(FALSE);
+    if (FR==NULL) return(false);
     i=0;
     while(fgets0(s,100,FR)!=0) {
         sscanf(s,"%x",&u);
