@@ -4,15 +4,15 @@
 
 # Task Description
 
-[./[To Do] SystemC-Ex2.pdf](./%5BTo%20Do%5D%20SystemC-Ex2.pdf)
+[[To Do] SystemC-Ex2.pdf](./%5BTo%20Do%5D%20SystemC-Ex2.pdf)
 
 
 # Install systemC
 
-[Follow Here](https://github.com/DANTA-HOJA/SystemC_Practice)
+[Link](https://github.com/DANTA-HOJA/SystemC_Practice)
 
 
-# To Generate "memory dump file" for 8051_ISS
+# How to Generate "memory dump file" for 8051_ISS
 
 [Link](https://hackmd.io/25SsN_aGRD-ww4fAIBP-7A)
 
