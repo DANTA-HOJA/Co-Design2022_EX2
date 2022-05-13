@@ -3,4 +3,4 @@
 
 # reference
 
-loserking/Hardware-Software-Codesign-
+[loserking/Hardware-Software-Codesign-](https://github.com/loserking/Hardware-Software-Codesign-)
