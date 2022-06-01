@@ -11,12 +11,12 @@ SC_MODULE(matrix)
 	sc_out<bool>		alt;
 	SC_CTOR(matrix)
 	{
-		counter=0;
-		pricounter=0;
+		counter = 0;
+		pricounter = 0;
 		SC_METHOD(lookup2);
-		sensitive<<row;
+		sensitive << row;
 		SC_METHOD(count);
-		sensitive << clk.pos();
+		sensitive_pos << clk;
 	}
 private:
 	sc_signal<int>		state;
