@@ -10,11 +10,13 @@ void init(void){
 int main(void){
 	unsigned char i;
 	
-	init();
+	//init();
+	P3 = 0;
 	
-	for(i=0;i<10;i++){
-		P3 = 1; // Tell FIR value is ready to send
-		P0 = i; // Send value to FIR
+	for(i=0;i<11;i++){
+		
+		P3 = 1; // Value already prepared
+		P0 = i; // Tell FIR to catch value
 		P3 = 0; // Send complete, value is not ready
 	}
 }
