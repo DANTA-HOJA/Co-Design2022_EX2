@@ -13,8 +13,8 @@ int main(void){
 	init();
 	
 	for(i=0;i<10;i++){
-		P3 = 1;
-		P0 = i;
-		P3 = 0;
+		P3 = 1; // Tell FIR value is ready to send
+		P0 = i; // Send value to FIR
+		P3 = 0; // Send complete, value is not ready
 	}
 }
