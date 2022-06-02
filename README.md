@@ -19,8 +19,11 @@
 
 # NOTE
 
-- Remember to add all ```.cpp``` file and tag ```-I.``` while compiling with g++ compiler, see [file](./.vscode/c_cpp_properties.json).
+- Remember to add all ```.cpp``` file and tag ```-I.``` while compiling with g++ compiler, for example,
 
+```
+/usr/bin/g++ -g ./8051_iss.cpp -o ./out/8051_iss.out ./core_8051.cpp ./creg.cpp ./FIR_asic.cpp ./keyboard.cpp ./keyboardcontroller.cpp ./matrix.cpp ./op_bytes.cpp ./periph.cpp ./sram.cpp ./top.cpp ./Xram.cpp -I. -I[path to]/systemc-2.3.3/include -L[path to]/systemc-2.3.3/lib-linux64 -lsystemc
+```
 
 # Reference
 
