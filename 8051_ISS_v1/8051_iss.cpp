@@ -55,7 +55,6 @@ int sc_main(int argc, char *argv[])
 	}
 
 	///////////////////////////////////Start Test
-	sc_start(100, SC_NS);
 
 	sc_trace_file *Tf;
 	Tf = sc_create_vcd_trace_file("R10945018-SystemC-EX2_Waveform");
