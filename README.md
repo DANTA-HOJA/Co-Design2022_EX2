@@ -19,7 +19,7 @@
 
 # NOTE
 
-- Remember to add all ```.cpp``` file and tag ```-I.``` while compiling with g++ compiler, see [file](/home/r10945018/EEE5009_Co-Design2022/Co-Design2022_EX2/8051_ISS_test/.vscode/c_cpp_properties.json).
+- Remember to add all ```.cpp``` file and tag ```-I.``` while compiling with g++ compiler, see [file](./.vscode/c_cpp_properties.json).
 
 
 # Reference
