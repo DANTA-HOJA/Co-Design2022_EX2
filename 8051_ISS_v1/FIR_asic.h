@@ -19,8 +19,8 @@ SC_MODULE(FIR_asic)
 	{
 		rst = true;
 		/* switch 1-cycle or N-cycle. */
-		// SC_CTHREAD(FIR_1, clk.pos());
-		SC_CTHREAD(FIR_N, clk.pos());
+		SC_CTHREAD(FIR_1, clk.pos());
+		// SC_CTHREAD(FIR_N, clk.pos());
 	};
 	
 	/* 1 cycle ： use multi adders and multi multipliers */
